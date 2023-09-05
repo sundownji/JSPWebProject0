@@ -12,6 +12,7 @@ public class MemberRegistDTO {
 	private String addr1;
 	private String addr2;
 	
+	private String regidate;
 	
 	
 	public String getId() {
@@ -74,7 +75,12 @@ public class MemberRegistDTO {
 	public void setAddr2(String addr2) {
 		this.addr2 = addr2;
 	}
-	
+	public String getRegidate() {
+		return regidate;
+	}
+	public void setRegidate(String regidate) {
+		this.regidate = regidate;
+	}
 	
 	
 }

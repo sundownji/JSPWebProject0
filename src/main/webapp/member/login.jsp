@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../include/global_head.jsp" %>
-
+<script>
+function checkLogin(){
+	
+}
+</script>
 
  <body>
 	<center>
@@ -22,10 +26,10 @@
 				<div class="login_box01">
 					<img src="../images/login_tit.gif" style="margin-bottom:30px;" />
 					<ul>
-						<li><img src="../images/login_tit001.gif" alt="아이디" style="margin-right:15px;" /><input type="text" name="" value="" class="login_input01" /></li>
-						<li><img src="../images/login_tit002.gif" alt="비밀번호" style="margin-right:15px;" /><input type="text" name="" value="" class="login_input01" /></li>
+						<li><img src="../images/login_tit001.gif" alt="아이디" style="margin-right:15px;" /><input type="text" name="id" value="" class="login_input01" /></li>
+						<li><img src="../images/login_tit002.gif" alt="비밀번호" style="margin-right:15px;" /><input type="text" name="pw" value="" class="login_input01" /></li>
 					</ul>
-					<a href=""><img src="../images/login_btn.gif" class="login_btn01" /></a>
+					<a href=""><img src="../images/login_btn.gif" class="login_btn01"  onClick="checkLogin()"/></a>
 				</div>
 				<p style="text-align:center; margin-bottom:50px;"><a href=""><img src="../images/login_btn02.gif" alt="아이디/패스워드찾기" /></a>&nbsp;<a href=""><img src="../images/login_btn03.gif" alt="회원가입" /></a></p>
 			</div>

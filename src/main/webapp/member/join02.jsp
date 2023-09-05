@@ -22,7 +22,7 @@
 
 				<p class="join_title"><img src="../images/join_tit03.gif" alt="회원정보입력" /></p>
 				
- 			<form action="" name="registform" method="post" onsubmit="return formValidate(this);">
+ 			<form action="joinAction.jsp" name="registform" method="post" onsubmit="return formValidate(this);">
 				<table cellpadding="0" cellspacing="0" border="0" class="join_box">
 					<colgroup>
 						<col width="80px;" />
@@ -70,7 +70,7 @@
 	<input type="text" name="email_2" style="width:150px;height:20px;border:solid 1px #dadada;" value="" />
 	<select name="last_email_check2" onChange="email_input(this.form);" class="pass" id="last_email_check2" >
 		<option selected="" value="">선택해주세요</option>
-		<option value="1" >직접입력</option>
+		<option value="직접입력" >직접입력</option>
 		<option value="gmail.com" >gmail.com</option>
 		<option value="hanmail.net" >hanmail.net</option>
 		<option value="nate.com" >nate.com</option>
@@ -273,6 +273,21 @@ function formValidate(frm){
 		        }
 		    }).open();
 		}
+		//아이디 중복확인 
+		function id_check_person(fn){
+		    if(fn.id.value==''){
+		        alert("아이디를 입력후 중복확인 해주세요.");
+		        fn.id.focus();
+		    }
+		    else{
+		        //아이디 중복확인 창을 띄울때 입력한 아이디를 쿼리스트링으로 
+		        //넘겨준다. 
+		        window.open('RegiIdOverlap.jsp?id='+fn.id.value, 
+		            'idOver', 
+		            'width=500,height=300');
+		        //입력한 아이디를 수정할 수 없도록 속성을 추가한다. 
+		        fn.id.readOnly = true;
+		    }
 
 
 
